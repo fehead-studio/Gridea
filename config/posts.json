@@ -1,0 +1,81 @@
+{
+  "posts": [
+    {
+      "content": "\r\n> 绪论\r\n> 来fehead的时候，fehead是一穷二白，快要走了，发现也是一穷二白，有种什么都没做的感觉\r\n> 结合实习经历，想整一个fehead开发学习的基建，留点东西下来，让后生可以不断完善，不至于刚进来的时候有种“假大空”的感觉(这是我进fehead几个月后的主观感受)\r\n> 最重要的是文档和开发流程\r\n> 文档最重要：记录开发学习的内容，可以是一种总结，此为其一。留下文档可助后生快速入门，减少学习和指导成本，此为其二。来日需要对项目二次开发或者重构追加功能时，提供指导，此为其三。\r\n> 开发流程次之：规范的开发流程和代码规范，可以提高共同开发的效率和减少阅读代码的难度。\r\n\r\n# git\r\n## 搭建git仓库\r\n加入`fehead-studio`组织\r\n\r\n## 流程规范\r\n### 创建项目\r\n1. 团队成员在`fehead-studio`创建仓库\r\n2. 开发者`fork`仓库到个人账号\r\n3. 开发者`clone`仓库到本地进行开发\r\n\r\n### 开发规范\r\n1. `clone`到本地的仓库默认分支在主分支\r\n2. 建立新分支，新分支以本次操作命名，如：`add_chat_function`\r\n3. 当开发期间团队仓库分支发生更改，并可能与正在开发的任务发生冲突时，切换到`master`分支，`pull`新的内容，然后切换回开发分支，使用`rebase`命令进行处理，具体操作见[git文档](// TODO)\r\n\r\n`注：不要在本地主分支开发，保证在pull的时候不会发生冲突`\r\n\r\n### commit规范\r\n[参考文章](https://juejin.im/post/6844903606815064077)\r\n```\r\n<type>(<change_name>): <message>\r\n```\r\neg:\r\n```\r\nfeat(fehead_build): add document\r\n```\r\ntype参照如下：\r\n```\r\nfeat: 新特性\r\nfix: 修改问题\r\nrefactor: 代码重构\r\ndocs: 文档修改\r\nstyle: 代码格式修改, 注意不是 css 修改\r\ntest: 测试用例修改\r\nchore: 其他修改, 比如构建流程, 依赖管理\r\n```\r\n\r\n### 合并代码\r\n1. 开发完后`commit`代码，然后`push`到个人仓库\r\n2. 向主仓库提`pull request`\r\n3. 找相关成员进行`code review`(代码检查)\r\n4. 检查通过后由管理员合入仓库\r\n\r\n# 文档\r\n## github上新建文档仓库\r\n1. 由管理员在团队账号上新建文档仓库\r\n2. 文档仓库开放`merge`权限\r\n3. 每位成员在团队仓库创建一个个人分支，提交个人的文章\r\n4. `master`分支用于提交基础文档\r\n",
+      "data": {
+        "title": "fehead基础建设",
+        "date": "2020-09-12 18:11:12",
+        "tags": [
+          "灯塔共建",
+          "Nightnessss"
+        ],
+        "published": true,
+        "hideInList": false,
+        "feature": null,
+        "isTop": false
+      },
+      "isEmpty": false,
+      "excerpt": "",
+      "abstract": "",
+      "fileName": "fehead-ji-chu-jian-she"
+    },
+    {
+      "content": "\r\n> 记一下项目开发的规范，统一开发规范可以有效提高共同开发效率和代码质量\r\n> 本文档图片的 winsoullin 理解为团队正式发布的仓库，Nightnessss 理解为个人仓库\r\n\r\n## Fork原项目\r\n进入目标仓库，`fork`项目到自己的仓库\r\n![](https://fehead-studio.github.io/post-images/github_ecology/fork_0.png)\r\n\r\n`fork`完后可以再自己的`GitHub`中找到这个仓库\r\n![](https://fehead-studio.github.io/post-images/github_ecology/fork_1.png)\r\n## 创建你的主题分支\r\n1. 将自己`GitHub`的仓库`clone`到本地\r\n![](https://fehead-studio.github.io/post-images/github_ecology/idea_clone_0.png)\r\n![](https://fehead-studio.github.io/post-images/github_ecology/idea_clone_1.png)\r\n\r\n2. 创建新分支，分支命名尽量与改动需求相关\r\n![](https://fehead-studio.github.io/post-images/github_ecology/branch_0.png)\r\n创建完后可以在`local branches`看到\r\n![](https://fehead-studio.github.io/post-images/github_ecology/branch_1.png)\r\n## 代码上传\r\n1. 在新建的分支下进行开发\r\n2. 开发完后提交`commit`\r\n![](https://fehead-studio.github.io/post-images/github_ecology/commit.png)\r\n3. `push`代码，注意远程仓库为个人仓库，新建与本地分支同名的远程分支\r\n![](https://fehead-studio.github.io/post-images/github_ecology/push.png)\r\n\r\n## 发送Pull Request\r\n\r\n1. 在个人仓库选中刚刚提交的分支，点击`pull request`\r\n![](https://fehead-studio.github.io/post-images/github_ecology/pull_request_0.png)\r\n2. 创建`pull request`，注意目标仓库分支和源仓库分支\r\n![](https://fehead-studio.github.io/post-images/github_ecology/pull_request_1.png)\r\n3. 提交完后可以在`pull request`查看信息\r\n![](https://fehead-studio.github.io/post-images/github_ecology/pull_request_3.png)\r\n![](https://fehead-studio.github.io/post-images/github_ecology/pull_request_2.png)\r\n4. 为这个`pull request`指定`reviewers`和`assignees`，或者直接把连接发给某人，帮你检查合并代码\r\n![](https://fehead-studio.github.io/post-images/github_ecology/pull_request_4.png)\r\n5. 之前都是开发者视角，现在开始是审阅人的视角，审阅人可以在修改的代码段添加评论\r\n![](https://fehead-studio.github.io/post-images/github_ecology/code_review_0.png)\r\n6. 如果代码没问题，可以`approve`(只有`reviewers`有`approve`权限)，并评论`LGTM`(Look Good To Me[狗头])\r\n![](https://fehead-studio.github.io/post-images/github_ecology/code_review_1.png)\r\n1. 仓库管理员`merge pull request`\r\n![](https://fehead-studio.github.io/post-images/github_ecology/pull_request_5.png)\r\n\r\n---\r\n\r\n参考文章: https://blog.csdn.net/yxys01/article/details/78316649",
+      "data": {
+        "title": "共同开发规范",
+        "date": "2020-09-12 18:01:56",
+        "tags": [
+          "灯塔共建",
+          "Nightnessss"
+        ],
+        "published": true,
+        "hideInList": false,
+        "feature": null,
+        "isTop": false
+      },
+      "isEmpty": false,
+      "excerpt": "",
+      "abstract": "",
+      "fileName": "gong-tong-kai-fa-gui-fan"
+    }
+  ],
+  "tags": [
+    {
+      "name": "灯塔共建",
+      "slug": "2KzAGKwVJ",
+      "used": true
+    },
+    {
+      "name": "Nightnessss",
+      "slug": "0AqDzIa8ne",
+      "used": true
+    },
+    {
+      "name": "Gridea",
+      "slug": "KgE8Im14e",
+      "used": false
+    }
+  ],
+  "menus": [
+    {
+      "link": "/",
+      "name": "首页",
+      "openType": "Internal"
+    },
+    {
+      "link": "/archives",
+      "name": "归档",
+      "openType": "Internal"
+    },
+    {
+      "link": "/tags",
+      "name": "标签",
+      "openType": "Internal"
+    },
+    {
+      "link": "/post/about",
+      "name": "关于",
+      "openType": "Internal"
+    }
+  ]
+}

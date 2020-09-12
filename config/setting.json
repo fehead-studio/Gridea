@@ -1,0 +1,28 @@
+{
+  "config": {
+    "branch": "master",
+    "cname": "",
+    "domain": "https://fehead-studio.github.io",
+    "email": "",
+    "platform": "github",
+    "privateKey": "",
+    "repository": "fehead-studio.github.io",
+    "token": "fd1e0f9d6b2ff1d87080a973b9ccdb7f5a2756fa",
+    "username": "fehead-studio"
+  },
+  "comment": {
+    "commentPlatform": "gitalk",
+    "disqusSetting": {
+      "api": "",
+      "apikey": "",
+      "shortname": ""
+    },
+    "gitalkSetting": {
+      "clientId": "",
+      "clientSecret": "",
+      "owner": "",
+      "repository": ""
+    },
+    "showComment": false
+  }
+}
